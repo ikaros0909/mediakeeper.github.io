@@ -1,0 +1,532 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+/* sticky footer 세팅 시작*/
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+  background-color: #ffffff;
+}
+
+/* sticky footer 세팅 끝*/
+
+.grey6{
+  background-color: #666666;
+}
+
+/* .font-nago{
+  font-family: 'Nanum Gothic', sans-serif;
+} */
+
+.font-bongo{
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+nav{
+  height: 61px;
+  line-height: 38px;
+  padding-top: 13px;
+  background-color: #000000;
+
+}
+nav ul li{
+  padding-left: 15px;
+}
+
+.bayo-symbol{
+  background-image: url(/icons/bayo.svg);
+  background-repeat: no-repeat;
+  display: block;
+  float: left;
+
+  background-size: auto 35px;
+  height: 35px;
+  overflow: hidden;
+  padding: 0;
+  width: 42px;
+
+}
+
+.bayo-symbol-title{
+  float: left;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 26px;
+  margin-left: 15px;
+  margin-top: 5px;
+  max-width: 66%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.nav-container{
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+
+
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+
+/* 
+.dropdown-content {
+  min-width: 166px; 
+} */
+
+.container.wide90left {
+  margin-left: 5%;
+  max-width: 400px;
+  width: 90%;
+  display:inline-block;
+}
+
+.btn:hover{
+  background-color: red;
+}
+
+.btn.wide{
+  width: 100%;
+}
+
+.wide80{
+  margin-top: 18px;
+  margin-left: 10%;
+  margin-bottom: 20px;
+  width: 80%;
+}
+
+.btn-small {
+  text-transform: none;
+  max-width: 90%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+ 
+.card{
+  padding: 10px;
+  /* margin: 0.5rem 0px 0rem 0; */
+}
+
+#view-container {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#view-container div {
+  margin: 10px;
+}
+
+#view-container.hide-button-area div {
+  overflow: hidden;
+  height: 0px;
+  margin: 0px;
+}
+#view-container.nobutton a {
+  display: none;
+}
+
+#view-container textarea{
+  margin: 10px;
+  height: 300px;
+  width:95%;
+  background-color: rgb(29, 29, 29);
+  color: #d18f00;
+}
+
+
+.jpgmask-container img{
+  margin: 2px;
+  padding: 2px;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+}
+.jpgmask-container svg{
+  position: relative;
+  bottom: 100px;
+  left: 50%;
+  fill: #ff00009e;
+  transform: scale(4);
+}
+
+
+.jpg-list img{
+  width: auto;
+  height: 60px;
+}
+
+
+.jpg-selected img{
+  transform: rotate(-5deg);
+}
+
+
+/* .jpg-selected:after{
+  content: '선택됨 selected';
+    display: inline-block;
+    transform: translate(50%,-50%);
+    color: red;
+    font-size: 2rem;
+} */
+.jpg-list div{
+      padding: 5px;
+      color: wheat;
+      background-color: gray;
+      display: inline-block; 
+      margin: 2px; 
+      width: 94px; 
+      height: 60px;
+  }
+
+
+.loader-small {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+}
+.loader{
+  border: 15px solid #f3f3f3;
+  border-top: 15px solid #3498db;
+  border-radius: 50%;
+  width: 88px;
+  height: 88px;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+[type="checkbox"]:checked+span:not(.lever):before {
+  border-right: 2px solid #ff0057;
+  border-bottom: 2px solid #ff0057;
+}
+
+[type="checkbox"]+span:not(.lever):before, [type="checkbox"]:not(.filled-in)+span:not(.lever):after {
+  border: 2px solid #979797;
+}
+
+.drop-area {
+  border: 2px dotted pink;
+  margin: 17px 0 17px 0;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
+
+
+.lang-btn{
+  font-size: 11px;
+  background-color: #ffffff; 
+  border: 1px solid #b6b6b6;
+  border-radius: 10px;
+  color: grey;
+  padding: 2px 10px;
+  /* display: inline-block; */
+  position: relative;
+  float: right;
+  cursor: pointer;
+}
+
+.processor-msg{
+  font-size: 14px;
+  background-color: #dedede;
+  border-radius: 10px;
+  color: black;
+  padding: 10px 9px;
+  text-align: center;
+  margin-top: 5%;
+}
+
+#process-filename-input {
+  color: red;
+  margin: 10px 0 10px 0;
+}
+
+/* 모드 라벨 설명 */
+
+.label{
+  font-size: 12px;
+  background-color: #555555;
+  border-radius: 10px;
+  color: white;
+  padding: 2px 18px;
+  display: inline-block;
+}
+
+.main-mode-info{
+  font-size: 15px;
+    border: 1px solid #e6e4e4;
+    border-radius: 15px;
+    background-color: #f9f9f9;
+    margin: 10px 0;
+}
+
+
+.file-mode-info{
+  font-size: 15px;
+  margin: 10px;
+}
+
+.description{
+  font-size: 12px;
+  margin: 5px 10px 20px 12px;
+}
+
+.static-filebox{
+  font-size: 11px;
+  margin-bottom: 8px;
+}
+
+.static-filebox .info{
+  margin-left: 60px;
+  font-size: 12px;
+}
+.static-filebox i.filetype-icon{
+  position: absolute;
+    width: 42px;
+    height: 42px;
+    overflow: hidden;
+    left: 15px;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 18px;
+    line-height: 42px;
+    color: #fff;
+    background-color: #999;
+    text-align: center;
+}
+
+
+
+.option-title{
+  font-weight: bold;
+  font-size: 16px;
+  /* margin-bottom: -10px;
+  margin-top: 10px; */
+}
+
+.option-subtitle{
+  font-size: 16px;
+  color: grey;
+}
+
+
+.story-step{
+  font-size: 12px;
+}
+
+
+
+.list-title{
+  font-weight: bold;
+  margin-left: 18px;
+  /* margin-bottom: -10px; */
+}
+
+
+
+.main-help > img{
+  width: 300px;
+  margin-left: 10%;
+}
+
+.story-step > img{
+  width: 300px;
+  margin-left: 5%;
+  padding: 2px;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+}
+
+.main-help a{
+  margin-left: 5%;
+  margin-bottom: 35px;
+  width: 300px;
+}
+
+
+/* facebot style */
+
+
+.facebox {
+  /* max-width: 400px; */
+  /* background: #ededed; */
+  border-radius: 10px;  
+  display: flex;
+  flex-direction: column;
+  padding: 30px 25px 30px;
+  margin: 5px 0px 300px;
+}
+
+.short-margin-bottom{
+  margin: 5px 0px 20px;
+}
+
+.facebox.dec > input {
+  font-size: 16px;
+  border: 0;
+  border-radius: 5px;
+  outline: 0;
+  padding: 10px 15px;
+  margin-top: 15px;
+}
+
+.facebot {
+  width: 100px;
+  border-radius: 50%;
+  background: #AAAAAA;
+  align-self: center;
+  transform-style: preserve-3d;
+}
+
+.face{
+  transform-origin: 50% 50% -30px;    
+}
+
+.mouth {
+  transform: translateZ(-4px);
+}
+
+
+@keyframes head-yaw {
+  0% {
+      transform: rotate3d(0,1,0, -15deg);
+  }
+
+  100% {
+      transform: rotate3d(0,1,0, 15deg);
+  }
+}
+@keyframes head-pitch {
+  0% {
+      transform: rotate3d(1,0,0, -15deg);
+  }
+
+  100% {
+      transform: rotate3d(1,0,0, 15deg);
+  }
+}
+@keyframes head-roll {
+  0% {
+      transform: rotate3d(0,0,1, -15deg);
+  }
+
+  100% {
+      transform: rotate3d(0,0,1, 15deg);
+  }
+}
+
+.head.wrong .face{
+  animation: head-yaw 0.8s ease-in-out 0s infinite alternate-reverse ;
+}
+.head.yes .face{   
+  animation: head-pitch 0.8s ease-in-out 0s infinite alternate-reverse ;
+}
+.head.idle{   
+  /* 주의:  .face .yes 가 아님.   붙어야 클래스 둘다 가진요소를 선택하고,  공백 있으면 자손선택자다.   */
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+  transform-origin: bottom;    
+  animation: head-roll 2.5s ease-in-out 0s infinite alternate-reverse ;
+}
+.head.idle .face{   
+  transform: rotate3d(1,0,0, 30deg);
+}
+
+.head.up .face{
+  transform: rotate3d(1,0,0, 30deg);
+}
+.head.down .face{
+  transform: rotate3d(1,0,0, -30deg);
+}
+
+.head.pass .mouth{
+  transform: scaleX(0.5);
+  transform-origin: center;
+}
+
+.browser-save-info{
+  margin-top: 10px;
+  font-size: 10px;
+}
+
+.device-info{
+  height: 500px;
+}
+
+
+/* .storage-list{
+  margin-left: 18px;
+  margin-right: 18px;
+}
+.storage-list > div{
+  margin-bottom: 5px;
+} */
+
+/* .chip{
+  cursor: pointer;
+} */
+
+
+.storage-item{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 10px 10px;
+  cursor: pointer;
+}
+
+.storage-item i{
+  color: #e2e2e2
+}
+
+.storage-buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.storage-buttons > div {
+  width: 30%;
+  cursor: pointer;
+  text-align: center;
+}
+
+.divider{
+  margin: 10px 0;
+}
+
+.user-view {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+.float-button {
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  cursor: pointer; /* Add a mouse pointer on hover */
+}
+
+
+

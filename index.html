@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ko"> 
+<head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2.0"/>
+  <meta name="Description" content="파일암호화,변신,합체,mp4,동영상,만화,사진">
+  <title>media keeper bayo</title>
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/apple-icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/apple-icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/apple-icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/apple-icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/apple-icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/apple-icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/apple-icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-icons/apple-icon-180x180.png">
+
+  <link rel="icon" type="image/png" sizes="192x192"  href="/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#3498db">
+
+</head>
+<body class="font-bongo" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
+<header>
+    <!-- head메뉴  -->
+    <div class="navbar-fixed">
+        <nav role="navigation">
+            <div class="nav-container">
+              <a href="https://mediakeeper.github.io" class="bayo-symbol"></a>
+              <a href="https://mediakeeper.github.io" class="bayo-symbol-title">Bayo</a>
+              <!-- <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons">menu</i></a> -->
+              <ul class="right">
+                <li class='storage' style="cursor: pointer;" onclick="changeUIMode('storageView');">저장소</li>
+                <!-- <li class='help' style="cursor: pointer;" onclick="toggleHelpButton(true);">도움말</li> -->
+              </ul>
+            </div></nav>
+    </div>
+
+    <!-- head메뉴 끝 -->
+</header>
+<main >
+    <div class="container device-info">
+      <br> <h5>loading...</h5>
+    </div>
+    <div class="container ui-container  hide">
+              <br>
+              <div class='lang-btn' onclick="toggleLang();">lang</div>
+              <br>
+              <div class="hide storage-view card" style="margin-top: 16px;">
+                <div style="display: flex; justify-content: space-between;">
+                    <i class="material-icons" >storage</i>
+                    <div>browser storage</div>
+                    <i class="material-icons storage-close-btn"  style="cursor: pointer;">close</i>
+                </div>
+                <div class="storage-loader center hide" style="margin: 15px;"><div class="loader"></div></div>
+            <ul class='collection storage-filelist'></ul>
+            <div class='storage-buttons'>
+              <div class='storage-add-btn'><i class="material-icons">add</i><br>추가</div>
+              <div class='storage-delete-btn hide'><i class="material-icons">delete</i><br>삭제</div>
+            </div>
+            <input hidden type="file" multiple onchange="addFilesToStorage(this.files);" >
+          </div>      
+          <div class="main file-field input-field">
+              <div class="btn grey6">
+                <span>File</span>
+                <input type="file" multiple onchange="onFileSelected(this.files);" >
+              </div>
+              <div class="file-path-wrapper">
+                <input class="file-path" type="text" placeholder='Select one or more files'>
+              </div>
+          </div>
+          <div class="banner-view hide"><a href="https://mediakeeper.github.io"><img class="responsive-img" src="banners/defaultBayoBanner.jpg"></a></div>
+          <div class="user-choice">
+            <!-- 선택파일 정보 -->
+            <!-- <div class="label">선택된 파일</div> -->
+            <div class="static-filebox card hide">
+                <i class="material-icons circle filetype-icon">folder</i> 
+                <div style="margin-bottom: 10px;" class="info">
+                  <div class="fileName" style="width: 90%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">-</div>
+                  <div class="fileNumSize">-</div>
+                  <div>type: <span class="fileType"></span></div>
+                </div>
+                <div class="file-mode-info">
+                  <div class="divider"></div>
+                  <div class='kr hide'></div>
+                  <div class='en hide'></div>    
+                </div>
+                
+            </div>
+            <div class="main-mode-info">
+              <ul class='kr hide browser-default'></ul>
+              <ul class='en hide browser-default'></ul>  
+            </div>
+              <!-- 프로세서 -->
+              <div class="hide card processor">
+                      <div class="processor-msg ">I'm ready</div>
+                      <div class="loader hide"></div>
+                      <div class="progress gray hide">
+                          <div class="determinate pink " style="width: 0%"></div>
+                      </div>
+                      <div class="process-result hide">
+                          <input type="text" id="process-filename-input"></input>
+                          <a class="hide waves-effect waves-light btn save wide" download="mynameis.bayo">save as file</a>
+                          <a class="hide waves-effect waves-light btn save-browser wide" style="margin-top: 10px;">save to browser</a>
+                            <div style="margin-top: 10px; margin-left: 13px; font-size: 11px;" class="hide save-browser-info"></div>
+                      </div>                        
+              </div>
+
+              <!-- bayo만들기 옵션선택 -->
+              <div class="card option-select row hide"  >
+                  <div class="option-combine hide">
+                      <div class="option-title">합체 완료 ( Combine )</div>
+                      <div class="divider"></div>
+                    <div><label><input type="checkbox" disabled checked class="" /><span> Automatically selected ( 자동 선택됨 )</span></label></div>
+                      <div class="description">
+                        합체 기능은 여러개의 파일을 하나의 파일로 모아주는 기능입니다.  
+                        선택되는 파일의 종류는 무관하며, 다중파일 선택시 자동으로 활성화됩니다.
+                        </div>    
+                  </div>
+                  <div class="option-title">변신 ( transform )</div>
+                  <div class="divider"></div>
+                    <div><label><input type="checkbox" class="option-jpgmask" /><span>Convert file to JPG ( JPG 파일로 변신 )</span></label></div>
+                    <div class="description">선택된 파일을 직접 선택한 JPG 이미지로 변신시켜 저장해줍니다.  
+                      본 옵션을 선택시 생성되는 bayo 파일의 기본 확장자는 *.jpg 이며, 외부 프로그램에서 jpg 이미지로 인식됩니다.
+                    </div>
+                    <div class="row jpgmask-container hide"  >
+                        <div class="col s12 m4">
+                          <div class="jpg-selected"></div>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                          <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                        </div>
+                        <div class="jpg-list col s12 m8"></div>
+                        <div class="jpg-local col s12">
+                          <div class="file-field input-field">
+                            <div class="btn grey6">
+                              <span>File</span>
+                              <input type="file" multiple  onchange="onLocalJPGFileSelected(this.files);">
+                            </div>
+                            <div class="file-path-wrapper">
+                              <input class="file-path" type="text" placeholder="Select one or more local JPG images">
+                            </div>
+                          </div>
+                        </div>
+                    </div>  
+                  <div class="option-title">암호화 ( encryption )</div>
+                  <div class="divider"></div>
+                  <div><label><input type="checkbox"  class="option-encryption" /><span>Select Encryption Algorithm.( 암호화 방식 선택 )</span></label></div>
+                      <div class="encrypt-mode-radio hide" style="margin-left: 20px;">
+                        <p>
+                          <label>
+                            <input name="encryptModeRadioChecker" type="radio" value="1" checked/>
+                            <span>AES-CTR</span>
+                          </label>
+                        </p>
+                        <p>
+                          <label>
+                            <input name="encryptModeRadioChecker" type="radio" value="2" />
+                            <span>AES-GCM</span>
+                          </label>
+                        </p>
+                      </div>
+                      <div class="description">파일을 암호화하여 저장할수 있습니다. 기본으로 AES-CTR 알고리즘을 사용하시면됩니다.
+                      AES-GCM 방식은 데이타 변조 확인이 가능한 방법으로 파일이 변조된 경우 복원을 중지합니다.
+                      * 한글 및 모든 UTF-8 문자 암호 사용이 가능합니다.  한글 문장형 암호문은 기억하기 쉽고 보안에도 좋습니다.
+                      </div>
+                      <div class="enc-pwinput input-field hide" style="margin-bottom: 110px;">
+                        <input id="pwInput" type="text" >
+                        <label for="pwInput">Input password!</label>
+                        <a class="hide red waves-effect waves-light btn encrypt wide80">파일생성 create bayo file</a>
+                      </div>
+                      <a class="hide blue waves-effect waves-light btn collect wide80">파일생성 create bayo file</a>
+                  </div>
+                <div class="card facebox dec hide">
+                        <svg class="facebot" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M0,150 C0,65 120,65 120,150" fill="#eee" stroke="#000" stroke-width="2.5" />
+                          <g class="head">
+                              <circle cx="60" cy="60" r="40" fill="#eee" stroke="#000" stroke-width="2.5" />
+                              <g class="face">
+                                      <g class="eyes">
+                                          <line x1="37" x2="50" y1="55" y2="55" stroke="#000" stroke-width="3" stroke-linecap="round" />
+                                          <line x1="70" x2="83" y1="55" y2="55" stroke="#000" stroke-width="3" stroke-linecap="round" />
+                                      </g>
+                                      <g class="mouth">
+                                      <path  d="M40,70 Q60,80 80,70"  fill="none" stroke="#333" stroke-width="3" stroke-linecap="round" />            
+                                      </g>
+                                  </g>        
+                          </g>
+                      </svg>
+                    <div class="input-field">
+                        <input id="pwDecInput" type="text" >
+                        <label for="pwDecInput">Input password.</label>
+                        <a class="light-red waves-effect waves-light btn decrypt wide hide">복호화 decrypt</a>
+                      </div>
+                </div>
+
+        </div>  <!-- 파일박스 컨테이너-->
+        
+          <!-- <div class='logger' hidden style='margin: 10px 0; height: 150px; font-size: 0.7em; background-color: #000; padding: 5px; overflow-y: scroll; color: #ffa10e;'></div> -->
+    </div>   <!-- end of ui-container -->
+    <!--복호화 정보 뷰 컨테이너 -->
+    <div id="view-container" class="hide center grey darken-3" ></div> 
+      <!-- <li><a onclick="toggleHelpButton(true)" class="btn-floating red darken-1"><i class="material-icons">help</i></a></li> -->
+    <div id="viewer-toggle-save-button" style="right: 90px;" onclick="toggleViewerSaveButtons()" class="float-button btn-floating hide">
+      <i class="material-icons blue circle">save_alt</i>
+    </div>
+    <div id="topButton" onclick="topFunction()" class="btn-floating float-button hide">
+      <i class="material-icons red circle">arrow_upward</i>
+    </div>  
+      
+</main>
+<footer class="page-footer light grey lighten-1">
+    <div class="container" style="margin-bottom: 15px;">
+      Media Keeper
+      </div>
+    <div class="footer-copyright">
+      <div class="container">
+          Bayo
+        </div>
+    </div>
+  </footer>
+  <script>
+    if( typeof(TextEncoder) == "undefined" ) {  // 지원하지 않는 브라우저. 임시 확인방식
+        console.log('No support TextEncoder');
+        document.querySelector('.device-info').innerHTML = '<br><h5>please use chrome , firefox, chromium edge browser</h5>';
+    }
+  </script>
+  <script src="ejs/materialize.min.js"></script>
+  <script src="ejs/sha256.min.js"></script>
+  <script src="ejs/base64js.min.js"></script>
+  <script src="ejs/localforage.min.js"></script>
+  <script src="js/bayoCryptoUtil_v1.0.js"></script>
+  <script src="js/bayoCryptoMain_v1.0.js"></script>
+  </body>
+</html>
