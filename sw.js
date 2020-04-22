@@ -1,4 +1,4 @@
-var cacheName = 'bayo20200422a'; 
+var cacheName = 'bayo20200422ab'; 
 var dataCacheName = 'notInUse';
 var filesToCache = [
     '/',
@@ -13,7 +13,7 @@ var filesToCache = [
     '/js/bayoCryptoUtil_v1.0.js',
     '/js/bayoCryptoWorker_v1.0.js',
     '/icons/icon-36.png',
-    '/icons/icon-512.png',
+    '/icons/icon-512b.png',
     '/icons/bayo.svg',
     '/jpgMaskSample/bernard-hermant-665508-unsplash.jpg',
     '/jpgMaskSample/justin-lim-500765-unsplash.jpg',
