@@ -1,4 +1,4 @@
-var cacheName = 'bayo20200421a'; 
+var cacheName = 'bayo20200422a'; 
 var dataCacheName = 'notInUse';
 var filesToCache = [
     '/',
@@ -12,12 +12,8 @@ var filesToCache = [
     '/js/bayoCryptoMain_v1.0.js',
     '/js/bayoCryptoUtil_v1.0.js',
     '/js/bayoCryptoWorker_v1.0.js',
-    '/icons/android-icon-48x48.png',
-    '/icons/android-icon-72x72.png',
-    '/icons/android-icon-96x96.png',
-    '/icons/android-icon-144x144.png',
-    '/icons/android-icon-192x192.png',
-    '/icons/bayo512x512.png',
+    '/icons/icon-36.png',
+    '/icons/icon-512.png',
     '/icons/bayo.svg',
     '/jpgMaskSample/bernard-hermant-665508-unsplash.jpg',
     '/jpgMaskSample/justin-lim-500765-unsplash.jpg',
@@ -58,7 +54,7 @@ self.addEventListener('activate', function(e) {
 
 self.addEventListener('fetch', function(e) {
 //   console.log('[Service Worker] Fetch', e.request.url);
-  var dataUrl = 'https://cryptomedia.github.io/data';
+  var dataUrl = 'https://mediakeeper.github.io/data';
   if (e.request.url.indexOf(dataUrl) > -1) {
     // 이건 미사용중
     e.respondWith(

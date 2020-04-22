@@ -62,8 +62,8 @@ nav ul li{
   font-size: 17px;
   font-weight: 500;
   line-height: 26px;
-  margin-left: 15px;
-  margin-top: 5px;
+  margin-left: 0px;
+  margin-top: 9px;
   max-width: 66%;
   overflow: hidden;
   text-overflow: ellipsis;
