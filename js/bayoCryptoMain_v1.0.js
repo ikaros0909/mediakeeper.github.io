@@ -130,9 +130,11 @@ function changeUIMode(mode){
             <li>암호화, 합체, 변신, 브라우저 저장 감상!</li>\
             <li>[생성] 일반 파일 한개나 여러개를 다중 선택</li> \
             <li>[복원] 복원 및 감상은 bayo 파일 1개만 선택</li>";
-            mainModeInfoEn = "<li>encrypt, combine, transform, store at once.</li> \
-            <li>[create] Select one or multiple files to make new bayo file.</li> \
-            <li>[recover] Select one bayo file.</li>";
+            mainModeInfoEn = 
+            "<li>Keep MP4 videos, image files safe.</li>\
+            <li>Encrypt, Merge, Transform, Store, Watch</li>\
+            <li>[create] Select one or multiple files.</li> \
+            <li>[decode] Select one bayo file.</li>";
             // setFaceBot('idle');
             break;
         case 'storageView': 
