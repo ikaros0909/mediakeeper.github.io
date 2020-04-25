@@ -19,9 +19,9 @@
 
 
 ## example  mp4 video
-1. encode: select mp4 video > [encryption] > [transform] > jpeg image(mp4 video embeded).
+1. encode: select mp4 video > [encrypt] > [transform] > jpeg image(mp4 video embeded).
 2. keep:  On browser storage, file system, or website. 
-3. decode: select mp4 embeded jpeg image file > [decryption] > play mp4 video(on browser)
+3. decode: select mp4 embeded jpeg image file > [decrypt] > play mp4 video(on browser)
 
 ## image collection
 1. encode: select multiple image files > [Merge] > [transform] > one jpeg image.
