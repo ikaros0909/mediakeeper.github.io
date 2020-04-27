@@ -307,7 +307,7 @@ function jpgProcessor(file){
 // JPG Mask 서버 제공 이미지 선택
 var jpgBuffers = [];
 function fetchServerImageList(){
-  var jpgList = [ 'bernard-hermant-665508-unsplash.jpg', 'justin-lim-500765-unsplash.jpg', 'michael-prewett-126900-unsplash.jpg', 'palesa-717372-unsplash.jpg' ];
+  var jpgList = [ 'MediaKeeper.jpg','bayo-human1.jpg','bernard-hermant-665508-unsplash.jpg', 'justin-lim-500765-unsplash.jpg', 'michael-prewett-126900-unsplash.jpg', 'palesa-717372-unsplash.jpg' ];
   jpgList.forEach( function(url ){
       fetchImage( 'jpgMaskSample/'+url , con.jpg_list );    
   })    

@@ -1,4 +1,4 @@
-var cacheName = 'bayo20200422ab'; 
+var cacheName = 'bayo20200427a'; 
 var dataCacheName = 'notInUse';
 var filesToCache = [
     '/',
@@ -19,9 +19,12 @@ var filesToCache = [
     '/jpgMaskSample/justin-lim-500765-unsplash.jpg',
     '/jpgMaskSample/michael-prewett-126900-unsplash.jpg',
     '/jpgMaskSample/palesa-717372-unsplash.jpg',
+    '/jpgMaskSample/MediaKeeper.jpg',
+    '/jpgMaskSample/bayo-human1.jpg',
     '/favicon-32x32.png',
     '/favicon-16x16.png',
-    '/banners/defaultBayoBanner.jpg'
+    '/images/Bayo-mediaKeeper-card.png',
+    '/banners/Bayo-mediaKeeper-banner1.png'
 ];
 
 
