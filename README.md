@@ -86,9 +86,9 @@ Media Keeper  Bayo ( 미디어키퍼 바요)
 브라우저에서 바로 감상(mp4, image, txt 파일만 바로보기 지원) 하거나, 복원하여 저장후 사용
 
 
-샘플 예제:
+# 샘플 예제
 
-    mp4 동영상이나  사진 모음을   jpg 이미지로 변신시켜서 보관 및 웹을통해 배포 가능함. 실제로 아래에 링크된  bayo_cat_woman.jpg  파일속에는  mp4 동영상이 암호화되어 삽입되어 있음. 
+  mp4 동영상이나  사진 모음을   jpg 이미지로 변신시켜서 보관 및 웹을통해 배포 가능함. 실제로 아래에 링크된  bayo_cat_video.jpg  파일속에는  mp4 동영상이 암호화되어 삽입되어 있음. 
 
 샘플 파일:  https://mediakeeper.github.io/example/bayo_cat_video.jpg 
 
