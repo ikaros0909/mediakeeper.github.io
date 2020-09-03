@@ -1,4 +1,4 @@
-var cacheName = 'bayo20200427a'; 
+var cacheName = 'bayo2020-0903'; 
 var dataCacheName = 'notInUse';
 var filesToCache = [
     '/',
