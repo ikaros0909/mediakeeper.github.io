@@ -15,7 +15,7 @@
 * Play secret mp4 video & image with browser.
 * up to 2GB file size.
 
-## website: https://mediakeeper.github.io
+## website: http://localhost:8080
 
 
 ## mp4 video
@@ -91,12 +91,12 @@ Media Keeper  Bayo ( 미디어키퍼 바요)
 
   mp4 동영상이나  사진 모음을   jpg 이미지로 변신시켜서 보관 및 웹을통해 배포 가능함. 실제로 아래에 링크된  bayo_cat_video.jpg  파일속에는  mp4 동영상이 암호화되어 삽입되어 있음. 
 
-샘플 파일:  https://mediakeeper.github.io/example/bayo_cat_video.jpg 
+샘플 파일:  http://localhost:8080/example/bayo_cat_video.jpg 
 
 예제 파일 테스트 방법  
 
   1. 첨부된 예제 jpg 이미지 파일을 다운로드
-  2. 웹앱 접속 ( https://mediakeeper.github.io/  )후 
+  2. 웹앱 접속 ( http://localhost:8080/  )후 
 
      파일 선택하기에서 해당 jpg 파일을 선택( PC에서는 끌어붙이기 지원)  
   3. 암호 입력창에  암호문 입력:   mediakeeperbayo   

@@ -891,20 +891,20 @@ function setLang(){ // 초기 kr 이후 en 과 kr 반복.
 
 
     if(setup.langSet == 'kr'){
-        con.bayoAppTitle.textContent = '바요';
+        con.bayoAppTitle.textContent = '진학어플라이 솔루션';
         con.navStorage.textContent = '저장소';
         // con.navHelp.textContent = '도움말';        
         con.processSaveButton.textContent = '파일로 저장';
         con.processSaveBrowserButton.textContent = '브라우저에 저장';
-        con.processSaveBrowserInfo.textContent =  '생성된 bayo 파일을 브라우저 저장소에 저장해두면 편리합니다.\
+        con.processSaveBrowserInfo.textContent =  '생성된 암호화 파일을 브라우저 저장소에 저장해두면 편리합니다.\
         메뉴 browser storage 기능을 이용하세요. 주의. 브라우저에 저장된 파일은 지워질수 있으니 반드시 별도 파일로 저장해주세요!';
     }else{
-        con.bayoAppTitle.textContent = 'Bayo';
+        con.bayoAppTitle.textContent = 'Jinahkapply Solutions';
         con.navStorage.textContent = 'Storage';
         // con.navHelp.textContent = 'Help';
         con.processSaveButton.textContent = 'save as file';
         con.processSaveBrowserButton.textContent = 'save to browser storage';
-        con.processSaveBrowserInfo.textContent =  '- You can save bayo file into web browser storage.\
+        con.processSaveBrowserInfo.textContent =  '- You can save encrypt file into web browser storage.\
         Use menu > browser storage button to reload.  * Warning. It can be deleted. you must backup the file.';
     }
 

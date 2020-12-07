@@ -1,7 +1,7 @@
 /*
  * bayoCryptoUtil.js
  */
-const APP_URL = "https://mediakeeper.github.io";
+const APP_URL = "http://localhost:8080";
 const NPOW_DEFAULT = 16; // 2^16승. 64K.
 const TAIL_LEN = 256;
 // const LOCALSTORAGE_FILESIZE_LIMIT = Math.pow(2,20) * 500 ; 

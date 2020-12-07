@@ -23,7 +23,7 @@ var filesToCache = [
     '/jpgMaskSample/bayo-human1.jpg',
     '/favicon-32x32.png',
     '/favicon-16x16.png',
-    '/images/Bayo-mediaKeeper-card.png',
+    '/images/Jinhak_Interview.gif',
     '/banners/Bayo-mediaKeeper-banner1.png'
 ];
 
@@ -57,7 +57,7 @@ self.addEventListener('activate', function(e) {
 
 self.addEventListener('fetch', function(e) {
 //   console.log('[Service Worker] Fetch', e.request.url);
-  var dataUrl = 'https://mediakeeper.github.io/data';
+  var dataUrl = 'http://localhost:8080/data';
   if (e.request.url.indexOf(dataUrl) > -1) {
     // 이건 미사용중
     e.respondWith(

@@ -44,7 +44,7 @@ nav ul li{
 }
 
 .bayo-symbol{
-  background-image: url(/icons/bayo.svg);
+  background-image: url(/icons/icon-512b.png);
   background-repeat: no-repeat;
   display: block;
   float: left;
@@ -53,7 +53,7 @@ nav ul li{
   height: 35px;
   overflow: hidden;
   padding: 0;
-  width: 42px;
+  width: 130px;
 
 }
 

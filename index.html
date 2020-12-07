@@ -40,8 +40,8 @@
     <div class="navbar-fixed">
         <nav role="navigation">
             <div class="nav-container">
-              <a href="https://mediakeeper.github.io" class="bayo-symbol"></a>
-              <a href="https://mediakeeper.github.io" class="bayo-symbol-title">Bayo</a>
+              <a href="http://localhost:8080" class="bayo-symbol"></a>
+              <a href="http://localhost:8080" class="bayo-symbol-title">진학어플라이 솔루션</a>
               <!-- <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons">menu</i></a> -->
               <ul class="right">
                 <li class='storage' style="cursor: pointer;" onclick="changeUIMode('storageView');">저장소</li>
@@ -60,6 +60,9 @@
               <br>
               <div class='lang-btn' onclick="toggleLang();">lang</div>
               <br>
+              <div class="col s12">
+                <img class="responsive-img" src="images/Jinhak_Interview.gif">
+              </div>
               <div class="hide storage-view card" style="margin-top: 16px;">
                 <div style="display: flex; justify-content: space-between;">
                     <i class="material-icons" >storage</i>
@@ -83,7 +86,7 @@
                 <input class="file-path" type="text" placeholder='Select one or more files'>
               </div>
           </div>
-          <div class="banner-view hide"><a href="https://mediakeeper.github.io"><img class="responsive-img" src="banners/Bayo-mediaKeeper-banner1.png"></a></div>
+          <div class="banner-view hide"><a href="http://localhost:8080"><img class="responsive-img" src="banners/Bayo-mediaKeeper-banner1.png"></a></div>
           <div class="user-choice">
             <!-- 선택파일 정보 -->
             <!-- <div class="label">선택된 파일</div> -->
@@ -114,8 +117,8 @@
                       </div>
                       <div class="process-result hide">
                           <input type="text" id="process-filename-input"></input>
-                          <a class="hide waves-effect waves-light btn save wide" download="mynameis.bayo">save as file</a>
-                          <a class="hide waves-effect waves-light btn save-browser wide" style="margin-top: 10px;">save to browser</a>
+                          <a class="hide waves-effect waves-light btn save wide" download="mynameis.jinhak">파일로 저장하기</a>
+                          <a class="hide waves-effect waves-light btn save-browser wide" style="margin-top: 10px;">브라우저에 저장하기</a>
                             <div style="margin-top: 10px; margin-left: 13px; font-size: 11px;" class="hide save-browser-info"></div>
                       </div>                        
               </div>
@@ -182,9 +185,9 @@
                       <div class="enc-pwinput input-field hide" style="margin-bottom: 110px;">
                         <input id="pwInput" type="text" >
                         <label for="pwInput">Input password!</label>
-                        <a class="hide red waves-effect waves-light btn encrypt wide80">파일생성 create bayo file</a>
+                        <a class="hide red waves-effect waves-light btn encrypt wide80">파일생성 create jinhak file</a>
                       </div>
-                      <a class="hide blue waves-effect waves-light btn collect wide80">파일생성 create bayo file</a>
+                      <a class="hide blue waves-effect waves-light btn collect wide80">파일생성 create jinhak file</a>
                   </div>
                 <div class="card facebox dec hide">
                         <svg class="facebot" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
@@ -224,44 +227,28 @@
     </div>  
       <div class="container intro-en">
         <div class="row">
-          <div class="col s12">
-            <img class="responsive-img" src="images/Bayo-mediaKeeper-card.png">
-          </div>
             <div class="col s12">
-                <h5>Keep Sensitive Files Safe</h5>
+                <h5>민감한 파일을 안전하게 유지</h5>
             </div>
               <div class="col s12 l6">
-            <h5>Encrypt</h5>
-            <p>100% privacy!  No account,  No installation. Very Fast. Up to 2GB file size.  
-          Support AES cryptography algorithm.</p>
+            <h5>암호화</h5>
+            <p>100% privacy!  최대 2GB 파일 크기.
+              AES 암호화 알고리즘을 지원합니다.</p>
           </div>
           <div class="col s12 l6">
-              <h5>Transform</h5>
-              <p>It’s a file transformer. You can convert any type of files into a jpeg image file. 
-                  You can choose the image want to be.</p>  
+              <h5>변환</h5>
+              <p>파일 변환기입니다. 모든 유형의 파일을 jpeg 이미지 파일로 변환 할 수 있습니다. 
+                원하는 이미지를 선택할 수 있습니다.</p>  
           </div>
           <div class="col s12 l6">
-            <h5>Unicode Passphrase</h5>
-            <p>You can use world wide utf-8 encoded unicode characters. 
-                 </p>
+            <h5>유니 코드 암호</h5>
+            <p>utf-8 인코딩 유니 코드 문자를 사용할 수 있습니다.</p>
           </div> 
           <div class="col s12 l6">
-              <h5>Browser Pocket & Instant Viewer</h5>
-              <p>Store media files into browser storage.
-                  Watch your mp4, images, text files without other application. </p>
-            </div>    
-          <div class="col s12 l6">
-              <h5>PWA</h5>
-              <p>It’s a progressive web app. 
-                Add to home screen.  It works offline.
-                Support modern mobile/desktop browsers. ( chrome, firefox, safari, chromium edge, samsung )</p>
-            </div>    
-          <div class="col s12 l6">
-              <h5>Open Source</h5>
-              <p>It’s open source web app. 
-                  <a href="https://github.com/mediakeeper/mediakeeper.github.io">Github repository</a>
-                  </p>
-            </div>       
+              <h5>브라우저 포켓 및 인스턴트 뷰어</h5>
+              <p>미디어 파일을 브라우저 저장소에 저장합니다.
+                다른 응용 프로그램없이 mp4, 이미지, 텍스트 파일을 볼수 있습니다. </p>
+            </div>
         </div>
       </div>
 </main>
@@ -271,7 +258,7 @@
       </div>
     <div class="footer-copyright">
       <div class="container">
-          Bayo
+          Jinhakapply Solutions
         </div>
     </div>
   </footer>

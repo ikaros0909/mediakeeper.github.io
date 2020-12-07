@@ -166,7 +166,7 @@ async function createBayoFile( theFiles , metaData ){
         fileInfoPackView.setUint16( fileInfoPackPos.fileInfoLen , fileInfoU8arr.byteLength);
 
        var saveFilename;
-       var fileExtName =  metaData.setup.jpgMask ? '.jpg' : '.bayo' ;
+       var fileExtName =  metaData.setup.jpgMask ? '.jpg' : '.jinhak' ;
         if(isEncrypt){
             // 1. fileInfoPack 암호화
             await bayoCrypto( rawByteCryptoKey, fileInfoPack, 0); 
@@ -178,8 +178,9 @@ async function createBayoFile( theFiles , metaData ){
             tailPack.set( tail.encryptedCryptoKey , tailPos.encryptedCryptoKey );
             tail.encryptMode[0] = encryptMode;   
             // 3. 파일명 변조 설정
-            var n = parseInt( Math.random() * (fileNameLibrary.length - 1) );
-            saveFilename  = fileNameLibrary[n] + '_'+buf2hex( tail.ivBin.buffer ).substr(0,2) + fileExtName;
+            // var n = parseInt( Math.random() * (fileNameLibrary.length - 1) );
+            // saveFilename  = fileNameLibrary[n] + '_'+buf2hex( tail.ivBin.buffer ).substr(0,2) + fileExtName;
+            saveFilename = fileInfo.name[0] + fileExtName;
         }else{
             tail.encryptMode[0] = CRYPTO_MODE["PLAINTEXT"]; 
             saveFilename = fileInfo.name[0] + fileExtName;
